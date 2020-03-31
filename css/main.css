@@ -1172,7 +1172,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff50be;
+  background: #549529;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2436,23 +2436,4 @@ ul.breadcrumb li + li:last-child {
 }
 .links-of-blogroll-item {
   padding: 0;
-}
-body {
-  background: url("https://imgur.com/BjgkHgU");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-.content-wrap {
-  opacity: 0.9;
-}
-.sidebar {
-  opacity: 0.9;
-}
-.header-inner {
-  background: rgba(255,255,255,0.9);
-}
-.popup {
-  opacity: 0.9;
 }
