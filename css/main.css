@@ -1172,7 +1172,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #91e0b1;
+  background: #cb52ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2438,7 +2438,7 @@ ul.breadcrumb li + li:last-child {
   padding: 0;
 }
 body {
-  background: url("https://i.imgur.com/HfwgQ3M.jpg");
+  background: url("https://i.imgur.com/BjgkHgU.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
