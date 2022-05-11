@@ -42,3 +42,13 @@ fb.collection("event")
       object2.appendTo(last);
     });
   });
+
+$("button").click(function(){
+  var pdf = new jsPDF('', 'pt', 'a4');
+  for(let i = 0; i<$("label").length ; i++){
+      pdf.text($("label")[i].text(), 10, 20);
+      pdf.addImage($("canvas")[i].toDataURL("image/png"), 'PNG', 0, 0, 595.28, 592.28/canvas.width * canvas.height );
+      pdf.addPage();
+}
+  pdf.save("QRcode.pdf");
+  )
