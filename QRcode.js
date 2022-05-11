@@ -30,7 +30,7 @@ fb.collection("event")
       console.log("1");
       var object = global_object.clone();
       var object2 = global_object2.clone();
-      var last = $(" .container).last();
+      var last = $(" .container").last();
       object.find("label").text(doc.data().name);
       object2
         .find("div[data-qr = 'true']")
