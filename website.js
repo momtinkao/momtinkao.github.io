@@ -22,7 +22,7 @@ function initDoTheWork() {
   return initDoTheWork.promise;
 }
 
-export async function doTheWork() {
+ async function doTheWork() {
   // the actual function to be exported
   const { app } = await initDoTheWork();
 
