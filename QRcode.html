@@ -29,24 +29,30 @@
   <script type="text/javascript" src="jquery.qrcode.min.js"></script>
 
   <body>
-    <div class="container">
+    <section>
       <div class="row">
-        <div class="col-5"></div>
-        <div class="col">
-          <label></label>
-        </div>
-        <div class="col-5"></div>
+        <div class="col-4"></div>
+        <label align="center"></label>
+        <div class="col-4"></div>
       </div>
       <div class="row">
         <div class="col-4"></div>
         <div class="col">
-          <div data-qr="true"></div>
+          <div data-qr="true" align="center"></div>
         </div>
         <div class="col-4"></div>
+      </div>
+    </section>
+    <div class="row" id="download_button">
+      <div class="col-10"></div>
+      <div class="col">
+        <button class="btn btn-outline-success" type="button">下載</button>
       </div>
     </div>
   </body>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="jf-openhuninn-1.1-normal.js"></script>
   <script src="QRcode.js"></script>
 </html>
