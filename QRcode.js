@@ -38,6 +38,7 @@ fb.collection("event")
           height: 256,
           text: doc.id + "/" + doc.data().loc,
         });
+      console.log("1");
       last.before(object);
       last.before(object2);
     });
