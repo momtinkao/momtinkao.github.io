@@ -10,23 +10,14 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-async function Init() {
-  const app = firebase.initializeApp(firebaseConfig);
-  return { app };
-}
+firebase.initializeApp(firebaseConfig);
 
-function initDoTheWork() {
-  if (!initDoTheWork.promise) {
-    initDoTheWork.promise = Init();
-  }
-  return initDoTheWork.promise;
-}
 
- async function doTheWork() {
-  // the actual function to be exported
-  const { app } = await initDoTheWork();
 
-  const fb = app.firestore();
+
+
+
+  const fb = firebase.firestore();
 
   const commit_login_bt = document.getElementById("login_btn");
   const logout_btn = document.getElementById("logout");
@@ -118,4 +109,4 @@ function initDoTheWork() {
     sessionStorage.setItem("QRid", $(this).attr("data-QR"));
     window.open("QRcode.html", (config = "height=500,width=500"));
   });
-}
+
