@@ -27,8 +27,8 @@ fb.collection("event")
   .then((querySnapshot) => {
     $(" .container").empty();
     querySnapshot.forEach((doc) => {
-      console.log("1");
       var object = global_object.clone();
+      console.log(object);
       var object2 = global_object2.clone();
       var last = $(" .container").last();
       object.find("label").text(doc.data().name);
