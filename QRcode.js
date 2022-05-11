@@ -51,4 +51,4 @@ $("button").click(function(){
       pdf.addPage();
 }
   pdf.save("QRcode.pdf");
-  )
+});
