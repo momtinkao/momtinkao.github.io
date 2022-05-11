@@ -30,6 +30,7 @@ fb.collection("event")
       console.log("1");
       var object = global_object.clone();
       var object2 = global_object2.clone();
+      var last = $(" .container).last();
       object.find("label").text(doc.data().name);
       object2
         .find("div[data-qr = 'true']")
@@ -38,8 +39,8 @@ fb.collection("event")
           height: 256,
           text: doc.id + "/" + doc.data().loc,
         });
-      $("#download").before(object);
-      $("#download").before(object2);
+      object.appendTo(last);
+      object2.appendTo(last);
     });
   });
 
