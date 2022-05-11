@@ -28,7 +28,7 @@ console.log(app);
       var login_email = document.getElementById("login_email").value;
       var login_password = document.getElementById("login_password").value;
       console.log("login");
-      app
+      firebase
         .auth()
         .signInWithEmailAndPassword(login_email, login_password)
         .then((userCredential) => {})
@@ -41,7 +41,7 @@ console.log(app);
   }
 
   logout_btn.addEventListener("click", (e) => {
-    app
+    firebase
       .auth()
       .signOut()
       .then(() => {
@@ -52,7 +52,7 @@ console.log(app);
       });
   });
 
-  app.auth().onAuthStateChanged((user) => {
+  firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       console.log(user);
       // User is signed in, see docs for a list of available properties
