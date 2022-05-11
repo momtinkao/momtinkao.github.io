@@ -29,7 +29,7 @@ fb.collection("event")
     querySnapshot.forEach((doc) => {
       var object = global_object.clone();
       var object2 = global_object2.clone();
-      var last = $(" .container").last();
+      var last = $("#download");
       object.find("label").text(doc.data().name);
       object2
         .find("div[data-qr = 'true']")
@@ -38,8 +38,8 @@ fb.collection("event")
           height: 256,
           text: doc.id + "/" + doc.data().loc,
         });
-      object.appendTo(last);
-      object2.appendTo(last);
+      last.before(object);
+      last.before(object2);
     });
   });
 
