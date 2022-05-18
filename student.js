@@ -117,8 +117,14 @@ function addStudent(path) {
         object.find(".btn-primary").attr("data-id", doc.id);
         object.find(".btn-primary").attr("data-path", path);
         object.find(".btn-primary").attr("data-true", "true");
-        if (doc.data().path) {
-          object.find("p").text("已打卡數量:" + doc.data().path.length);
+        if (doc.data().Pin) {
+          var i = 0;
+          for(var propt in doc.data().Pin){
+            if(doc.data().Pin[propt] == true){
+              i = i + 1;
+            }
+          }
+          object.find("p").text("已打卡數量:" + i);
         } else {
           object.find("p").text("還沒開始活動");
         }
@@ -128,6 +134,7 @@ function addStudent(path) {
 }
 
 $("#info").on("click", "[data-true = 'true']", function () {
+  DeleteMarkers();
   addMap($(this).attr("data-path"), $(this).attr("data-id"));
 });
 
@@ -193,4 +200,12 @@ function getLatLngFromString(ll) {
   ll = ll.replace(")", "");
   var latlng = ll.split(",");
   return new google.maps.LatLng(parseFloat(latlng[0]), parseFloat(latlng[1]));
+}
+
+function DeleteMarkers() {
+  //Loop through all the markers and remove
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(null);
+  }
+  markers.length = 0;
 }
