@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Open+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="map.css" />
+    <link rel="stylesheet" href="rank.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -22,10 +22,7 @@
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
-  <script
-              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0gGu2RPTNLXKWcli7ekStBLekTHSE0NI&callback=initMap&libraries=&v=weekly&channel=2"
-              async
-            ></script>
+    <!-- end FA -->
 
 
     <title>定向越野系統</title>
@@ -61,47 +58,57 @@
                   <a class="nav-link" href="map.html">地圖總覽</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="rank.html">學生成績</a>
+                  <a class="nav-link" id ="rank" href="rank.html">學生成績</a>
                 </li>
               </ul>
-              <button class="btn btn-outline-success" id="logout" type="submit">登出</button>
+              <button class="btn btn-outline-success" id="logout" type="submit">
+                登出
+              </button>
             </div>
           </div>
         </nav>
       </div>
     </header>
-    
 
     <section id="event_selector">
-      <div class = "jumbotron">
-        <div class="container">
-          <div class="row">
-            <div class="col-5"></div>
-            <div class="col">
-    <div class="btn-group">
-      <button type="button" class="btn btn-secondary" id="dropdownMenu2">請選擇活動</button>
-      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"  data-bs-toggle="dropdown" aria-expanded="false">
-        <span class="visually-hidden">Toggle Dropright</span>
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-      </ul>
-    </div>
+        <div class = "jumbotron">
+          <div class="container">
+            <div class="row">
+              <div class="col-5"></div>
+              <div class="col">
+      <div class="btn-group">
+        <button type="button" class="btn btn-secondary" id="dropdownMenu2">請選擇活動</button>
+        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"  data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="visually-hidden">Toggle Dropright</span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        </ul>
+      </div>
+              </div>
+              <div class="col-5"></div>
             </div>
-            <div class="col-5"></div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="intro">
-      <div class="jumbotron">
-        <div class="container">
-            <div id="map"></div>
-            <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-            
+      </section>
+
+      <section id="intro">
+          <div class="container">
+              <table class="table">
+                <thead>
+                  <tr class="table-primary">
+                    <th scope="col">排名</th>
+                    <th scope="col">學生</th>
+                    <th scope="col">時間</th>
+                  </tr>
+                </thead>
+                <tbody id="rankmap">
+                </tbody>
+              </table>
+              
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
+      </section>
+
     <section id="info">
         <div class="jumbotron">
           <div class="container">
@@ -117,6 +124,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-    <script src="map.js"></script>  
-</body>
+    <script src="rank.js"></script> 
+  </body>
 </html>
