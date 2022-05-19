@@ -69,6 +69,7 @@ function addTable(path) {
     .collection("student")
     .where("time", "!=", null)
     .onSnapshot((querySnapshot) => {
+      $("#rankmap").empty();
       console.log(querySnapshot);
       var map = new Map();
       querySnapshot.forEach((doc) => {
